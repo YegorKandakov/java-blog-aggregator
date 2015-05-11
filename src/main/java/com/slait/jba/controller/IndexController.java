@@ -1,4 +1,4 @@
-package cz.jiripinkas.jba.controller;
+package com.slait.jba.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
