@@ -11,22 +11,22 @@
 	</entity>
 
 	<entity>
-		<entity-name>com.slait.jba.entity.Blog</entity-name>
+		<entity-name>com.slait.jba.entity.Item</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>186</entity-height>
-		<entity-X-Coordinate>390</entity-X-Coordinate>
-		<entity-Y-Coordinate>27</entity-Y-Coordinate>
+		<entity-height>206</entity-height>
+		<entity-X-Coordinate>568</entity-X-Coordinate>
+		<entity-Y-Coordinate>20</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
 	</entity>
 
 	<entity>
-		<entity-name>com.slait.jba.entity.Item</entity-name>
+		<entity-name>com.slait.jba.entity.Blog</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>206</entity-height>
-		<entity-X-Coordinate>568</entity-X-Coordinate>
-		<entity-Y-Coordinate>20</entity-Y-Coordinate>
+		<entity-height>186</entity-height>
+		<entity-X-Coordinate>390</entity-X-Coordinate>
+		<entity-Y-Coordinate>27</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
