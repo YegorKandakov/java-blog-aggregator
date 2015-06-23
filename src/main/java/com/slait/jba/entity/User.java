@@ -2,12 +2,18 @@ package com.slait.jba.entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
+
+import org.apache.bval.constraints.Email;
+
+import com.slait.jba.annotation.UniqueUsername;
 
 @Entity
 public class User {
@@ -15,9 +21,19 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
+	
+	@Size(min = 3, message = "Name must be at least 3 characters")
+	@Column(unique=true)
+	@UniqueUsername(message="Such username already exists!")
 	private String name;
+	
+	@Size(min=4, message="Invalid!")
+	@Email(message="Invalid!")
 	private String email;
+	
+	@Size(min = 5, message = "Password must be at least 5 characters")
 	private String password;
+	
 	private boolean enabled;
 	
 	@ManyToMany
