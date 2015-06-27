@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.slait.jba.entity.User;
 import com.slait.jba.service.UserService;
@@ -33,12 +34,13 @@ public class RegisterController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String doRegistrer(@Valid @ModelAttribute("user") User user,
-			BindingResult result) {
+			BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "user-register";
 		}
 		userService.save(user);
-		return "redirect:/register.html?success=true";
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/register.html";
 	}
 	
 	@RequestMapping("/available")

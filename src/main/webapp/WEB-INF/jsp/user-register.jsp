@@ -5,7 +5,12 @@
 
 <form:form commandName="user" cssClass="form-horizontal registrationForm">
 
-	<c:if test="${param.success eq true}">
+	<div class="alert alert-info">
+		Didn't find your favourite blog? Register and submit a missing blog.
+		Otherwise you don't have to register.
+	</div>
+
+	<c:if test="${success eq true}">
 		<div class="alert alert-success">Registration successful</div>
 	</c:if>
 	
